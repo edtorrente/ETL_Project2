@@ -6,5 +6,7 @@
 
 ## Goals:
   * Extract information between two different datasets.
+    ** The Lebron file is a CSV file that has 262 rows and 27 columns while the Steph CSV has 5 rows and 21 columns. Fortunately, these sets contained plenty of         
+        information and easily cleaned.
   * Transform the datasets by minimizing, filtering, selecting, and joining based on the needs of the project.
   * Load into a database- PostgresSQL.
