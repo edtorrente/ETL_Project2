@@ -1,0 +1,53 @@
+CREATE TABLE lebron_stats (
+				Game INTEGER NOT NULL,
+				Date DATE NOT NULL,
+				Series VARCHAR NOT NULL,
+				ThreePointPercentage DECIMAL NOT NULL,
+				Points INTEGER NOT NULL)
+				
+SELECT * FROM lebron_stats
+
+
+CREATE TABLE steph_stats (
+				Season_year VARCHAR NOT NULL,
+				Date VARCHAR NOT NULL,
+				threepointers DECIMAL NOT NULL,
+				PTS INTEGER NOT NULL)
+				
+SELECT * FROM steph_stats
+
+-------------------------------------------------------------------------
+SELECT 
+l.Date, l.Points, s.Date, s.PTS
+
+FROM lebron_stats l
+JOIN steph_stats s
+ON l.Points = s.PTS
+
+SELECT 
+MAX(l.Points) AS LEBRON_career_high
+FROM lebron_stats l
+
+
+SELECT 
+MAX(S.Pts) AS STEPH_career_high
+FROM steph_stats s
+
+SELECT 
+AVG(l.Points) AS LEBRON_AVERAGE_PLAYOFF_PTS
+FROM lebron_stats l
+
+SELECT 
+AVG(S.PTS) AS STEPH_AVERAGE_PLAYOFF_PTS
+FROM steph_stats s
+
+
+SELECT
+AVG(l.ThreePointPercentage) AS LEBRON_3PT_PERCENTAGE_IN_PLAYOFFS
+FROM lebron_stats l
+
+SELECT
+AVG(s.threepointers) AS STEPH_3PT_PERCENTAGE_IN_PLAYOFFS
+FROM steph_stats s
+-------------------------------------------------------------------------------------------------------
+
